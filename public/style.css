@@ -1,0 +1,127 @@
+body {
+  font-family: "Rubik", serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fde8cf;
+}
+
+header {
+  padding: 20px;
+  background-color: rgba(253, 172, 114, 0.811);
+  border-radius: 50px;
+}
+
+header h3 {
+  align-items: center;
+  font-family: "Rubik", serif;
+  color: rgb(123, 40, 1);
+}
+
+header h1 {
+  font-family: "Macondo", serif;
+  font-size: 80px;
+  color: rgb(123, 40, 1);
+  text-align: center;
+}
+
+#random-book h2{
+  font-size: x-large;
+  color: rgb(123, 40, 1);
+  animation-duration: 1200ms;
+  animation-name: blink;
+  animation-iteration-count: infinite;
+}
+@keyframes blink {
+  0%{
+    color: rgb(123, 40, 1);
+  }
+  40%{
+    color: rgb(2, 126, 107);
+  }
+  80%{
+    color: rgb(228, 3, 213);
+  }
+  100%{
+    color: rgb(19, 139, 3);
+  }
+}
+
+#transit {
+  transition: background-color 1s 500ms;
+}
+
+#transit:hover {
+  color: rgba(253, 172, 114, 0.811);
+  background-color: rgb(152, 54, 2);
+  text-align: center;
+}
+
+#search {
+  padding: 8px;
+  width: 70%;
+  font-family: "Rubik", serif;
+  font-size: 20px;
+  color: rgb(123, 40, 1);
+  background-color: #fde8cf;
+  border: 1px solid rgb(123, 40, 1);
+  border-radius: 100px;
+}
+
+#search-btn {
+  padding: 6px;
+  width: 10%;
+  font-family: "Rubik", serif;
+  font-size: 20px;
+  color: rgb(123, 40, 1);
+  background-color: #fde8cf;
+  border: 1px solid c;
+  border-radius: 100px;
+}
+
+#search-btn:hover {
+  color: #fde8cf;
+  background-color: rgb(123, 40, 1);
+}
+
+input {
+  animation: 3s linear 1s infinite alternate slidein;
+}
+
+#results {
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: left;
+  padding: 20px;
+}
+
+.book-card {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 95%;
+  text-align: justify;
+  align-items: center;
+  margin: 10px;
+}
+
+.book-card h3,strong{
+  color: rgb(123, 40, 1);
+}
+.book-card img {
+  width: 20%;
+  height: auto;
+  border-radius: 10px;
+  
+}
+
+
+
+#random-book {
+  margin: 20px;
+  border: 1px solid rgb(123, 40, 1);
+  border-radius: 80px;
+  align-content: center;
+  text-align: center;
+}

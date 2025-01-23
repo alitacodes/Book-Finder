@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Book Finder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Macondo&family=Rubik+Vinyl&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div>
+    <header>
+      <h1 id="transit">Book Finder</h1>
+      <h3>Find a book here&nbsp;&nbsp;&nbsp;
+        <input id="search" type="text" placeholder="Search a Book" />&nbsp;&nbsp;
+        <button id="search-btn" onclick="searchBooks()">Search</button></h3>
+    </header>
+    <div id="random-book">
+      <h2>Random Book of the Day</h2>
+      <div id="about-random-book"></div>
+    </div>
+    <hr>
+    <div id="results"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
