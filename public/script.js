@@ -1,4 +1,4 @@
-const API_KEY = "AIzaSyBhBqi0Gj6aKHuqI_e5lJVBL3ko28KRcYA"; // Replace with your actual Google Books API key
+const API_KEY = "AIzaSyBhBqi0Gj6aKHuqI_e5lJVBL3ko28KRcYA"; 
 const RANDOM_BOOK_QUERY = "self development"; // Example query for "Random Book of the Day"
 
 // Function to fetch and display books based on search query
