@@ -133,13 +133,9 @@ input {
   text-align: center;
 }
 
-section h2,h4{
-  padding: 2px;
+.creator{
   text-align: center;
-}
-
-section a:hover{
-  color: blue;
+  margin-top: 20px;
 }
 
 footer{
