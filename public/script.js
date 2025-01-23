@@ -79,8 +79,8 @@ async function displayRandomBook() {
       randomBookDiv.innerHTML = "<p>No random book found. Try refreshing the page.</p>";
     }
   } catch (error) {
-    randomBookDiv.innerHTML = "<p>Error fetching random book. Please try again later.</p>";
-    console.error("Error fetching random book:", error);
+    randomBookDiv.innerHTML = "<p>Cannot fetch book. Please try again later.</p>";
+    console.error("Cannot fetch book:", error);
   }
 }
 
