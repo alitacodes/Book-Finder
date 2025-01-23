@@ -31,9 +31,11 @@ async function searchBooks() {
 
         // HTML structure for each book
         bookCard.innerHTML = `
-          <img src="${thumbnail}" alt="${title}" />
-          <h3>${title}</h3>
-          <p><strong>Author(s):</strong> ${authors}</p>
+          <div class="book-card">
+            <img src="${thumbnail}" alt="${title}" />
+            <h3>${title}</h3>
+            <p><strong>Author(s):</strong> ${authors}</p>
+          </div>
         `;
         resultsDiv.appendChild(bookCard);
       });
@@ -68,7 +70,7 @@ async function displayRandomBook() {
       const thumbnail = book.volumeInfo.imageLinks?.thumbnail || "https://via.placeholder.com/128x193?text=No+Image";
 
       randomBookDiv.innerHTML = `
-        <div class="book-card">
+        <div class="random-book-card">
           <img src="${thumbnail}" alt="${title}" />
           <h3>${title}</h3>
           <p><strong>Author(s):</strong> ${authors}</p>

@@ -19,7 +19,6 @@ header h3 {
   font-family: "Rubik", serif;
   color: #fde8cf;
   text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
-
 }
 
 header h1 {
@@ -28,7 +27,6 @@ header h1 {
   color: #fde8cf;
   text-align: center;
   text-shadow: 5px 5px 2px rgba(0, 0, 0, 0.5);
-
 }
 
 #random-book h2 {
@@ -51,16 +49,6 @@ header h1 {
   100%{
     color: rgb(19, 139, 3);
   }
-}
-
-#transit {
-  transition: background-color 1s 500ms;
-}
-
-#transit:hover {
-  color: rgba(253, 172, 114, 0.811);
-  background-color: rgb(123, 40, 1);;
-  text-align: center;
 }
 
 #search {
@@ -108,6 +96,42 @@ input {
 .book-card {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 300px; /* Fixed width for consistent size */
+  text-align: center;
+  margin: 10px;
+  border: 1px solid rgb(123, 40, 1);
+  border-radius: 10px;
+  background-color: #fde8cf;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-card:hover {
+  transform: scale(1.05);
+  box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.3);
+}
+
+.book-card h3,strong {
+  color: rgb(123, 40, 1);
+}
+
+.book-card img {
+  width: 100px; /* Smaller image size for a better fit */
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.book-card p {
+  font-size: 14px;
+  color: #333;
+}
+
+.random-book-card {
+  display: flex;
+  flex-direction: column;
   padding: 10px;
   width: 95%;
   text-align: justify;
@@ -115,18 +139,9 @@ input {
   margin: 10px;
 }
 
-.book-card h3,strong{
-  color: rgb(123, 40, 1);
-}
-.book-card img {
-  width: 20%;
-  height: auto;
-  border-radius: 10px;
-  
-}
-
 #random-book {
   margin: 20px;
+  color: rgb(123, 40, 1);
   border: 1px solid rgb(123, 40, 1);
   border-radius: 80px;
   align-content: center;
