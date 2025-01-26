@@ -1,4 +1,0 @@
-<p>
-	<a href="#" onclick="toggleSynopsis(${index})" class="synopsis-link">Description</a>
-</p>
-<p id="synopsis-${index}" class="see-synopsis">${description}</p>
