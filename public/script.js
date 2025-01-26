@@ -1,4 +1,4 @@
-const API_KEY = "AIzaSyBhBqi0Gj6aKHuqI_e5lJVBL3ko28KRcYA"; 
+const API_KEY = "AIzaSyBhBqi0Gj6aKHuqI_e5lJVBL3ko28KRcYA";
 const RANDOM_BOOK_QUERY = "self development"; // Example query for "Random Book of the Day"
 
 // Function to fetch and display books based on search query
@@ -28,6 +28,7 @@ async function searchBooks() {
         const title = book.volumeInfo.title || "No Title Available";
         const authors = book.volumeInfo.authors ? book.volumeInfo.authors.join(", ") : "Unknown Author";
         const thumbnail = book.volumeInfo.imageLinks?.thumbnail || "https://via.placeholder.com/128x193?text=No+Image";
+        const previewLink = book.volumeInfo.previewLink || "#";
 
         // HTML structure for each book
         bookCard.innerHTML = `
@@ -35,6 +36,7 @@ async function searchBooks() {
             <img src="${thumbnail}" alt="${title}" />
             <h3>${title}</h3>
             <p><strong>Author(s):</strong> ${authors}</p>
+            <p><a href="${previewLink}" target="_blank">Read More</a></p>
           </div>
         `;
         resultsDiv.appendChild(bookCard);
@@ -51,7 +53,7 @@ async function searchBooks() {
 // Function to fetch and display a random book
 async function displayRandomBook() {
   const randomBookDiv = document.getElementById("about-random-book");
-  randomBookDiv.innerHTML = "<p>Loading...</p>"; 
+  randomBookDiv.innerHTML = "<p>Loading...</p>";
 
   try {
     const response = await fetch(
@@ -83,6 +85,14 @@ async function displayRandomBook() {
   } catch (error) {
     randomBookDiv.innerHTML = "<p>Cannot fetch book. Please try again later.</p>";
     console.error("Cannot fetch book:", error);
+  }
+}
+
+// Function to toggle the visibility of the synopsis
+function toggleSynopsis(index) {
+  const synopsisElement = document.getElementById(`synopsis-${index}`);
+  if (synopsisElement) {
+    synopsisElement.classList.toggle("see-synopsis");
   }
 }
 

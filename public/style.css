@@ -129,6 +129,17 @@ input {
   color: #333;
 }
 
+.book-card a {
+  color: blueviolet;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.book-card a:hover {
+  color: darkblue;
+}
+
+
 .random-book-card {
   display: flex;
   flex-direction: column;
@@ -152,6 +163,24 @@ input {
   text-align: center;
   margin-top: 20px;
 }
+
+/*.see-synopsis {
+  display: none;
+  margin-top: 10px;
+  color: rgb(123, 40, 1);
+  font-size: 14px;
+  text-align: justify;
+}
+
+.synopsis-link {
+  color: rgb(123, 40, 1);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.synopsis-link:hover {
+  color: darkblue;
+}*/
 
 footer{
   text-align: center;
