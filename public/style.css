@@ -80,6 +80,22 @@ header {
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
+.random-book-content {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.random-book-content img {
+  max-width: 200px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.book-details {
+  flex-grow: 1;
+}
+
 .book-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
