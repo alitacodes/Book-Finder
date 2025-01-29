@@ -1,4 +1,4 @@
-const API_KEY = "AIzaSyBhBqi0Gj6aKHuqI_e5lJVBL3ko28KRcYA";
+
 const RANDOM_BOOK_QUERY = "classic literature"; 
 
 async function searchBooks() {
