@@ -1,5 +1,5 @@
 const API_KEY = "AIzaSyBhBqi0Gj6aKHuqI_e5lJVBL3ko28KRcYA";
-const RANDOM_BOOK_QUERY = "classic literature"; 
+const RANDOM_BOOK_QUERY = "classic literature";
 
 async function searchBooks() {
     const query = document.getElementById("search").value;
@@ -22,7 +22,7 @@ async function searchBooks() {
         const data = await response.json();
 
         if (data.items && data.items.length > 0) {
-            resultsDiv.innerHTML = ""; 
+            resultsDiv.innerHTML = "";
             data.items.forEach((book) => {
                 const bookCard = createBookCard(book);
                 resultsDiv.appendChild(bookCard);
@@ -45,23 +45,29 @@ async function searchBooks() {
 }
 
 function createBookCard(book) {
+    console.log(book);
     const bookCard = document.createElement("div");
     bookCard.className = "book-card";
 
     const title = book.volumeInfo.title || "No Title Available";
-    const authors = book.volumeInfo.authors ? book.volumeInfo.authors.join(", ") : "Unknown Author";
+    const authors = book.volumeInfo.authors?.join(", ") || "Unknown Author";
     const thumbnail = book.volumeInfo.imageLinks?.thumbnail || "https://via.placeholder.com/150x225?text=No+Image";
     const previewLink = book.volumeInfo.previewLink || "#";
+    const webViewLink = book.accessInfo.viewability !== "NO_PAGES" ? book.accessInfo.webReaderLink || "#" : null;
+    const buyLink = book.saleInfo?.buyLink;
 
     bookCard.innerHTML = `
         <img src="${thumbnail}" alt="${title}" />
         <h3>${title}</h3>
         <p><strong>Author(s):</strong> ${authors}</p>
-        <a href="${previewLink}" target="_blank">Read More</a>
+        <a href="${previewLink}" target="_blank">Read More</a><br>
+        ${webViewLink ? `<a href="${webViewLink}" target="_blank">Read PDF</a><br>` : ""}
+        ${buyLink ? `<a href="${buyLink}" target="_blank">Buy Book(PlayStore)</a>` : ""}
     `;
 
     return bookCard;
 }
+
 
 async function displayRandomBook() {
     const randomBookDiv = document.getElementById("about-random-book");
